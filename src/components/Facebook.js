@@ -1,5 +1,6 @@
 import React from 'react';
 import FacebookLogin from 'react-facebook-login';
+var key = require('./key.json');
 
 class Facebook extends React.Component {
 
@@ -30,7 +31,7 @@ class Facebook extends React.Component {
         </div>
         ) : 
         fbdata = (<FacebookLogin
-        appId="your_key_here"
+        appId={key.key}
         autoLoad={true}
         fields="name,picture"
         onClick={this.componentClicked}
